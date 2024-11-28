@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="forca">
+    <file>forca.png</file>
+  </qresource>
+</RCC>
