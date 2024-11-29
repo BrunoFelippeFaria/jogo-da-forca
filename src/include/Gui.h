@@ -13,7 +13,7 @@ using std::vector;
 class Gui : public QMainWindow{
     public:
         Ui::Form ui;
-        vector<QPushButton> btns;
+        vector<QPushButton*> btns;
         void setTemaText(string text);
         void setPalavraText(string text);
         void apertar(char letra);
