@@ -17,6 +17,8 @@ class Gui : public QMainWindow{
         void setTemaText(string text);
         void setPalavraText(string text);
         void apertar(char letra);
+        void gameOver();
+        void win();
         Gui();
 };
 

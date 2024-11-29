@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 #include <QPushButton>
+#include <QMessageBox>
 
 using std::cout;
 using std::string;
@@ -34,4 +35,14 @@ void Gui::setTemaText(string text){
 }
 void Gui::setPalavraText(string text){
     ui.txtLabel->setText(QString::fromStdString(text));
+}
+
+void Gui::gameOver(){
+    QMessageBox::critical(this, "Game over", "você perdeu");
+    QApplication::quit();
+}
+
+void Gui::win(){
+    QMessageBox::information(this, "Vitoria!", "parabéns, você acertou!");
+    QApplication::quit();
 }

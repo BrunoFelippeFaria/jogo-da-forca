@@ -11,6 +11,7 @@ using std::cout;
 using std::string;
 using std::array;
 
+int tentativa = 0;
 void escolherTema(Gui &gui, string &tema, string &palavra);
 
 array<string, 3> temas = {"Fruta", "Esporte", "Pais"};
@@ -90,6 +91,7 @@ void escolherTema(Gui &gui, string &tema, string &palavra){
 
 void apertar(char letra, string &palavra, Gui &gui, size_t btnIndex){
     bool acerto = false;
+    
     for (size_t i = 0; i < textOculto.size(); i++)
     {
         if (letra == palavra[i])
@@ -97,20 +99,35 @@ void apertar(char letra, string &palavra, Gui &gui, size_t btnIndex){
             textOculto[i] = letra;
             acerto = true;
         }
-
-        if (acerto){
-            gui.btns[btnIndex]->setStyleSheet("background-color: green; color: white;");
-        }
-
-        else{
-            gui.btns[btnIndex]->setStyleSheet("background-color: red; color: white;");
-
-        }
-
     }
 
-
     gui.btns[btnIndex]->setDisabled(true);
-    cout << textOculto;
     gui.setPalavraText(textOculto);
+
+    if (acerto){
+        gui.btns[btnIndex]->setStyleSheet("background-color: green; color: white;");
+
+        string text = textOculto;
+        cout << text << " " << palavra << "\n";
+
+        std::replace(text.begin(), text.end(), '\n', ' ');
+
+        if (text == palavra){
+            gui.win();
+        }
+    }
+
+    else{
+        tentativa++;
+        gui.btns[btnIndex]->setStyleSheet("background-color: red; color: white;");
+        string imagem = "../imagens/forca-" + std::to_string(tentativa) + ".png";
+        QPixmap pixmap(QString::fromStdString(imagem));
+        gui.ui.Forca->setPixmap(pixmap);
+        if (tentativa >= 6){
+            cout << "game over";
+            gui.gameOver();
+        }
+    }
+
+    
 }

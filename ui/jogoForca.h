@@ -68,7 +68,7 @@ public:
         TemaLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         Forca = new QLabel(Form);
         Forca->setObjectName("Forca");
-        Forca->setGeometry(QRect(-70, -30, 211, 271));
+        Forca->setGeometry(QRect(-70, -30, 291, 271));
         Forca->setPixmap(QPixmap(QString::fromUtf8(":/forca/forca.png")));
         btnQ = new QPushButton(Form);
         btnQ->setObjectName("btnQ");
