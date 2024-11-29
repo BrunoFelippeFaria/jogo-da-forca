@@ -68,8 +68,8 @@ public:
         TemaLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         Forca = new QLabel(Form);
         Forca->setObjectName("Forca");
-        Forca->setGeometry(QRect(-80, -20, 221, 271));
-        Forca->setPixmap(QPixmap(QString::fromUtf8("imagens/forca.png")));
+        Forca->setGeometry(QRect(-70, -30, 211, 271));
+        Forca->setPixmap(QPixmap(QString::fromUtf8(":/forca/forca.png")));
         btnQ = new QPushButton(Form);
         btnQ->setObjectName("btnQ");
         btnQ->setGeometry(QRect(70, 270, 31, 31));
@@ -529,8 +529,7 @@ public:
         font1.setUnderline(false);
         font1.setKerning(true);
         txtLabel->setFont(font1);
-        txtLabel->setStyleSheet(QString::fromUtf8("text-align: center;\n"
-""));
+        txtLabel->setStyleSheet(QString::fromUtf8("letter-spacing: 5px;"));
         txtLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         btnR = new QPushButton(Form);
         btnR->setObjectName("btnR");
@@ -586,7 +585,7 @@ public:
         btnC->setText(QCoreApplication::translate("Form", "C", nullptr));
         btnV->setText(QCoreApplication::translate("Form", "V", nullptr));
         btnM->setText(QCoreApplication::translate("Form", "M", nullptr));
-        txtLabel->setText(QCoreApplication::translate("Form", "_ _ _ _ _ _ _ _ _ _ _ _ _", nullptr));
+        txtLabel->setText(QCoreApplication::translate("Form", "____________", nullptr));
         btnR->setText(QCoreApplication::translate("Form", "R", nullptr));
     } // retranslateUi
 

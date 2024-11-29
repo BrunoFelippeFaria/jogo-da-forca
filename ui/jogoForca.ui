@@ -43,9 +43,9 @@
   <widget class="QLabel" name="Forca">
    <property name="geometry">
     <rect>
-     <x>-80</x>
-     <y>-20</y>
-     <width>221</width>
+     <x>-70</x>
+     <y>-30</y>
+     <width>211</width>
      <height>271</height>
     </rect>
    </property>
@@ -53,7 +53,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>imagens/forca.png</pixmap>
+    <pixmap resource="../build/imagens/imagens.qrc">:/forca/forca.png</pixmap>
    </property>
   </widget>
   <widget class="QPushButton" name="btnQ">
@@ -824,11 +824,10 @@ QPushButton:pressed {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">text-align: center;
-</string>
+    <string notr="true">letter-spacing: 5px;</string>
    </property>
    <property name="text">
-    <string>_ _ _ _ _ _ _ _ _ _ _ _ _</string>
+    <string>____________</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -866,7 +865,7 @@ QPushButton:pressed {
   </widget>
  </widget>
  <resources>
-  <include location="../imagens/imagens.qrc"/>
+  <include location="../build/imagens/imagens.qrc"/>
  </resources>
  <connections/>
 </ui>

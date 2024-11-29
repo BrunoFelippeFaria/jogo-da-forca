@@ -9,6 +9,8 @@ qt_standard_project_setup()
 
 include_directories(src/include ui)
 
+file(COPY ${CMAKE_SOURCE_DIR}/imagens DESTINATION ${CMAKE_BINARY_DIR})
+
 set(
     SOURCE_FILES
     src/main.cpp

@@ -15,6 +15,15 @@ Gui::Gui(){
         ui.btnL, ui.btnZ, ui.btnX, ui.btnC, ui.btnV, ui.btnB, ui.btnN, ui.btnM
     };
 
+    QPixmap pixmap("../imagens/forca.png");
+    if (pixmap.isNull())
+    {
+        cout << "imagen nao encontrada";
+    }
+
+    ui.Forca->setPixmap(pixmap);
+    
+
     show();
 
 

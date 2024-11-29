@@ -19,7 +19,7 @@ array<string, 3>esportes = {"futebol", "basquete", "voley"};
 array<string, 3>paises = {"brasil", "mexico", "estados unidos"};
 string textOculto;
 
-void apertar(char letra, string &palavra, Gui &gui);
+void apertar(char letra, string &palavra, Gui &gui, size_t btnIndex);
 
 
 int main(int argc, char *argv[])
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     for (size_t i = 0; i < gui.btns.size(); i++)
     {
         QObject::connect(gui.btns[i], &QPushButton::clicked, [i, &gui, &palavra, letras]{
-            apertar(letras[i], palavra, gui);
+            apertar(letras[i], palavra, gui, i);
         }
         );
     }
@@ -71,13 +71,11 @@ void escolherTema(Gui &gui, string &tema, string &palavra){
         random = rand() % paises.size();
         palavra = paises[random];
     }
-
-    palavra = "pera";
     
     for (char c : palavra){
         if (c != ' ')
         {
-            textOculto += "_ ";
+            textOculto += "_";
         }
         else{
             textOculto += '\n';
@@ -90,15 +88,29 @@ void escolherTema(Gui &gui, string &tema, string &palavra){
 
 }
 
-void apertar(char letra, string &palavra, Gui &gui){
+void apertar(char letra, string &palavra, Gui &gui, size_t btnIndex){
+    bool acerto = false;
     for (size_t i = 0; i < textOculto.size(); i++)
     {
         if (letra == palavra[i])
         {
             textOculto[i] = letra;
+            acerto = true;
         }
-        
+
+        if (acerto){
+            gui.btns[btnIndex]->setStyleSheet("background-color: green; color: white;");
+        }
+
+        else{
+            gui.btns[btnIndex]->setStyleSheet("background-color: red; color: white;");
+
+        }
+
     }
-    cout << letra;
+
+
+    gui.btns[btnIndex]->setDisabled(true);
+    cout << textOculto;
     gui.setPalavraText(textOculto);
 }
