@@ -1,7 +1,10 @@
 #include "Gui.h"
 #include "jogoForca.h"
 #include <string>
+#include <iostream>
+#include <QPushButton>
 
+using std::cout;
 using std::string;
 
 Gui::Gui(){

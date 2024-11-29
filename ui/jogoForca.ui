@@ -25,7 +25,6 @@
    <property name="font">
     <font>
      <pointsize>16</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
      <underline>true</underline>
     </font>
@@ -38,7 +37,7 @@
     <string>Tema</string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="Forca">
@@ -60,8 +59,8 @@
   <widget class="QPushButton" name="btnQ">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>260</y>
+     <x>70</x>
+     <y>270</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -90,8 +89,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnW">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>260</y>
+     <x>110</x>
+     <y>270</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -120,8 +119,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnE">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>260</y>
+     <x>150</x>
+     <y>270</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -150,8 +149,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnT">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>260</y>
+     <x>230</x>
+     <y>270</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -180,8 +179,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnY">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>260</y>
+     <x>270</x>
+     <y>270</y>
      <width>31</width>
      <height>31</height>
     </rect>
@@ -210,8 +209,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnI">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>260</y>
+     <x>350</x>
+     <y>270</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -240,8 +239,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnO">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>260</y>
+     <x>390</x>
+     <y>270</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -270,8 +269,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="bntU">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>260</y>
+     <x>310</x>
+     <y>270</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -300,8 +299,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnP">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>260</y>
+     <x>430</x>
+     <y>270</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -330,8 +329,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnG">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>300</y>
+     <x>250</x>
+     <y>310</y>
      <width>29</width>
      <height>31</height>
     </rect>
@@ -360,8 +359,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnA">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>300</y>
+     <x>90</x>
+     <y>310</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -390,8 +389,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnD">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>300</y>
+     <x>170</x>
+     <y>310</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -420,8 +419,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnH">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>300</y>
+     <x>290</x>
+     <y>310</y>
      <width>29</width>
      <height>31</height>
     </rect>
@@ -450,8 +449,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnF">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>300</y>
+     <x>210</x>
+     <y>310</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -480,8 +479,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnJ">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>300</y>
+     <x>330</x>
+     <y>310</y>
      <width>29</width>
      <height>31</height>
     </rect>
@@ -510,8 +509,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnS">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>300</y>
+     <x>130</x>
+     <y>310</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -540,8 +539,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnL">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>300</y>
+     <x>410</x>
+     <y>310</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -570,8 +569,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnK">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>300</y>
+     <x>370</x>
+     <y>310</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -600,8 +599,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnN">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>340</y>
+     <x>330</x>
+     <y>350</y>
      <width>29</width>
      <height>31</height>
     </rect>
@@ -630,8 +629,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnB">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>340</y>
+     <x>290</x>
+     <y>350</y>
      <width>29</width>
      <height>31</height>
     </rect>
@@ -660,8 +659,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnX">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>340</y>
+     <x>170</x>
+     <y>350</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -690,8 +689,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnZ">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>340</y>
+     <x>130</x>
+     <y>350</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -720,8 +719,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnC">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>340</y>
+     <x>210</x>
+     <y>350</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -750,8 +749,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnV">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>340</y>
+     <x>250</x>
+     <y>350</y>
      <width>29</width>
      <height>31</height>
     </rect>
@@ -780,8 +779,8 @@ QPushButton:pressed {
   <widget class="QPushButton" name="btnM">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>340</y>
+     <x>370</x>
+     <y>350</y>
      <width>30</width>
      <height>31</height>
     </rect>
@@ -819,7 +818,6 @@ QPushButton:pressed {
    <property name="font">
     <font>
      <pointsize>16</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
      <underline>false</underline>
      <kerning>true</kerning>
@@ -833,12 +831,42 @@ QPushButton:pressed {
     <string>_ _ _ _ _ _ _ _ _ _ _ _ _</string>
    </property>
    <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnR">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>270</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+QPushButton:hover {
+    background-color: rgb(64, 64, 64);
+    color: white;
+}
+
+QPushButton:pressed {
+    background-color: rgb(128, 128, 128); /* Cinza mais claro */
+    color: white; /* Mantém o contraste do texto */
+}</string>
+   </property>
+   <property name="text">
+    <string>R</string>
    </property>
   </widget>
  </widget>
  <resources>
-  <include location="imagens/imagens.qrc"/>
+  <include location="../imagens/imagens.qrc"/>
  </resources>
  <connections/>
 </ui>
