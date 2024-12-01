@@ -51,34 +51,54 @@ void escolherTema(Gui &gui, string &tema, string &palavra){
     srand(time(0));
 
     //temas e palavras
-    vector<string> temas = {"Fruta", "Esporte", "Pais", "Animal", "Cor", "Heroi"};
+    vector<string> temas = {
+        "Fruta", "Esporte", "Pais", "Animal", "Cor", "Heroi", "Objeto", "Profissão",
+        "nomes"
+    };
 
     vector<string>frutas = {
         "uva", "pera", "banana", "abacaxi", "kiwi", "morango", "manga", "melancia",
-        "laranja"
+        "laranja", "cereja", "ameixa", "abacate", "goiaba", "maracuja"
     };
 
     vector<string>esportes = {
-        "futebol", "basquete", "voley"
+        "futebol", "basquete", "voley", "tenis", "ciclismo", "golfe", "boxe"
     };
 
     vector<string>paises = {
-        "brasil", "mexico", "estados unidos", "alemanha", "japao", "canada", "china", "italia", "india"
+        "brasil", "mexico", "estados unidos", "alemanha", "japao", "canada", "china", "italia", "india", "russia", "espanha", "argentina", "coreia do sul", "egito"
     };
 
     vector<string>animais = {
         "urso", "galo", "macaco", "leao", "golfinho", "galinha", "baleia", "peixe", 
-        "castor"
+        "castor", "elefante", "lobo", "cavalo", "tigre", "tartaruga", "porco", "coruja",
+        "cachorro", "penguim", "gato", "passaro"
     };
 
     vector<string>cores = {
         "vermelho", "azul", "ciano", "preto", "verde", "marrom", "cinza", "branco", 
-        "rosa", "roxo"
+        "rosa", "roxo", "amarelo", "laranja", "dourado"
     };
 
     vector<string>herois = {
         "batman", "super man", "mulher maravilha", "flash", "homem aranha", "homem de ferro", "aquaman", "arqueiro verde", "lanterna verde"
     };
+
+     vector<string>objetos = {
+        "cadeira", "mesa", "caixa", "celular", "computador", "livro", "caneta",
+        "telefone", "relogio", "mochila", "lampada"
+     };
+
+     vector<string> profissoes = {
+        "medico", "pedreiro", "professor", "advogado", "engenheiro", "programador",
+        "jornalista", "motorista", "dentista", "pintor", "eletricista", "carpinteiro",
+        "policial"
+     };
+
+     vector<string> nomes = {
+        "ana", "carlos", "jorge", "maria", "pedro", "lucas", "fernanda", "juliana", 
+        "rafael", "vitor", "gabriel", "sofia", "eduardo", "beatriz", "isabela"
+     };
 
     vector<vector<string>> palavrasTemas = {
         frutas,
@@ -86,7 +106,10 @@ void escolherTema(Gui &gui, string &tema, string &palavra){
         paises,
         animais,
         cores,
-        herois
+        herois,
+        objetos,
+        profissoes,
+        nomes
     };
     
     random = rand() % temas.size();
