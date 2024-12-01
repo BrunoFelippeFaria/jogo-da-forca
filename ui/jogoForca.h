@@ -65,7 +65,6 @@ public:
         TemaLabel->setFont(font);
         TemaLabel->setStyleSheet(QString::fromUtf8("text-align: center;\n"
 ""));
-        TemaLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         Forca = new QLabel(Form);
         Forca->setObjectName("Forca");
         Forca->setGeometry(QRect(-70, -30, 291, 271));
@@ -522,7 +521,7 @@ public:
 "}"));
         txtLabel = new QLabel(Form);
         txtLabel->setObjectName("txtLabel");
-        txtLabel->setGeometry(QRect(190, 110, 281, 111));
+        txtLabel->setGeometry(QRect(160, 90, 301, 111));
         QFont font1;
         font1.setPointSize(16);
         font1.setBold(true);
@@ -530,7 +529,7 @@ public:
         font1.setKerning(true);
         txtLabel->setFont(font1);
         txtLabel->setStyleSheet(QString::fromUtf8("letter-spacing: 5px;"));
-        txtLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        txtLabel->setAlignment(Qt::AlignCenter);
         btnR = new QPushButton(Form);
         btnR->setObjectName("btnR");
         btnR->setGeometry(QRect(190, 270, 31, 31));
@@ -557,36 +556,114 @@ public:
 
     void retranslateUi(QWidget *Form)
     {
-        Form->setWindowTitle(QCoreApplication::translate("Form", "Form", nullptr));
+        Form->setWindowTitle(QCoreApplication::translate("Form", "Jogo da forca", nullptr));
         TemaLabel->setText(QCoreApplication::translate("Form", "Tema", nullptr));
         Forca->setText(QString());
         btnQ->setText(QCoreApplication::translate("Form", "Q", nullptr));
+#if QT_CONFIG(shortcut)
+        btnQ->setShortcut(QCoreApplication::translate("Form", "Q", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnW->setText(QCoreApplication::translate("Form", "W", nullptr));
+#if QT_CONFIG(shortcut)
+        btnW->setShortcut(QCoreApplication::translate("Form", "W", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnE->setText(QCoreApplication::translate("Form", "E", nullptr));
+#if QT_CONFIG(shortcut)
+        btnE->setShortcut(QCoreApplication::translate("Form", "E", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnT->setText(QCoreApplication::translate("Form", "T", nullptr));
+#if QT_CONFIG(shortcut)
+        btnT->setShortcut(QCoreApplication::translate("Form", "T", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnY->setText(QCoreApplication::translate("Form", "Y", nullptr));
+#if QT_CONFIG(shortcut)
+        btnY->setShortcut(QCoreApplication::translate("Form", "Y", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnI->setText(QCoreApplication::translate("Form", "I", nullptr));
+#if QT_CONFIG(shortcut)
+        btnI->setShortcut(QCoreApplication::translate("Form", "I", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnO->setText(QCoreApplication::translate("Form", "O", nullptr));
+#if QT_CONFIG(shortcut)
+        btnO->setShortcut(QCoreApplication::translate("Form", "O", nullptr));
+#endif // QT_CONFIG(shortcut)
         bntU->setText(QCoreApplication::translate("Form", "U", nullptr));
+#if QT_CONFIG(shortcut)
+        bntU->setShortcut(QCoreApplication::translate("Form", "U", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnP->setText(QCoreApplication::translate("Form", "P", nullptr));
+#if QT_CONFIG(shortcut)
+        btnP->setShortcut(QCoreApplication::translate("Form", "P", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnG->setText(QCoreApplication::translate("Form", "G", nullptr));
+#if QT_CONFIG(shortcut)
+        btnG->setShortcut(QCoreApplication::translate("Form", "G", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnA->setText(QCoreApplication::translate("Form", "A", nullptr));
+#if QT_CONFIG(shortcut)
+        btnA->setShortcut(QCoreApplication::translate("Form", "A", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnD->setText(QCoreApplication::translate("Form", "D", nullptr));
+#if QT_CONFIG(shortcut)
+        btnD->setShortcut(QCoreApplication::translate("Form", "D", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnH->setText(QCoreApplication::translate("Form", "H", nullptr));
+#if QT_CONFIG(shortcut)
+        btnH->setShortcut(QCoreApplication::translate("Form", "H", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnF->setText(QCoreApplication::translate("Form", "F", nullptr));
+#if QT_CONFIG(shortcut)
+        btnF->setShortcut(QCoreApplication::translate("Form", "F", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnJ->setText(QCoreApplication::translate("Form", "J", nullptr));
+#if QT_CONFIG(shortcut)
+        btnJ->setShortcut(QCoreApplication::translate("Form", "J", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnS->setText(QCoreApplication::translate("Form", "S", nullptr));
+#if QT_CONFIG(shortcut)
+        btnS->setShortcut(QCoreApplication::translate("Form", "S", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnL->setText(QCoreApplication::translate("Form", "L", nullptr));
+#if QT_CONFIG(shortcut)
+        btnL->setShortcut(QCoreApplication::translate("Form", "L", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnK->setText(QCoreApplication::translate("Form", "K", nullptr));
+#if QT_CONFIG(shortcut)
+        btnK->setShortcut(QCoreApplication::translate("Form", "K", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnN->setText(QCoreApplication::translate("Form", "N", nullptr));
+#if QT_CONFIG(shortcut)
+        btnN->setShortcut(QCoreApplication::translate("Form", "N", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnB->setText(QCoreApplication::translate("Form", "B", nullptr));
+#if QT_CONFIG(shortcut)
+        btnB->setShortcut(QCoreApplication::translate("Form", "B", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnX->setText(QCoreApplication::translate("Form", "X", nullptr));
+#if QT_CONFIG(shortcut)
+        btnX->setShortcut(QCoreApplication::translate("Form", "X", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnZ->setText(QCoreApplication::translate("Form", "Z", nullptr));
+#if QT_CONFIG(shortcut)
+        btnZ->setShortcut(QCoreApplication::translate("Form", "Z", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnC->setText(QCoreApplication::translate("Form", "C", nullptr));
+#if QT_CONFIG(shortcut)
+        btnC->setShortcut(QCoreApplication::translate("Form", "C", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnV->setText(QCoreApplication::translate("Form", "V", nullptr));
+#if QT_CONFIG(shortcut)
+        btnV->setShortcut(QCoreApplication::translate("Form", "V", nullptr));
+#endif // QT_CONFIG(shortcut)
         btnM->setText(QCoreApplication::translate("Form", "M", nullptr));
+#if QT_CONFIG(shortcut)
+        btnM->setShortcut(QCoreApplication::translate("Form", "M", nullptr));
+#endif // QT_CONFIG(shortcut)
         txtLabel->setText(QCoreApplication::translate("Form", "____________", nullptr));
         btnR->setText(QCoreApplication::translate("Form", "R", nullptr));
+#if QT_CONFIG(shortcut)
+        btnR->setShortcut(QCoreApplication::translate("Form", "R", nullptr));
+#endif // QT_CONFIG(shortcut)
     } // retranslateUi
 
 };

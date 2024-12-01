@@ -11,14 +11,16 @@ using std::string;
 using std::vector;
 
 class Gui : public QMainWindow{
-    public:
+    private:
         Ui::Form ui;
+    public:
         vector<QPushButton*> btns;
         void setTemaText(string text);
         void setPalavraText(string text);
         void apertar(char letra);
-        void gameOver();
+        void gameOver(QString txt);
         void win();
+        void setForcaImagem(QPixmap pixmap);
         Gui();
 };
 

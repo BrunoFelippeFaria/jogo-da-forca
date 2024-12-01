@@ -17,10 +17,18 @@ set(
     src/Gui.cpp
 )
 
-qt_add_executable(jogo-da-forca ${SOURCE_FILES})
+qt_add_executable(jogo-da-forca WIN32 ${SOURCE_FILES})
 
 target_link_libraries(jogo-da-forca  PUBLIC
     Qt::Core
     Qt::Gui
     Qt::Widgets
+)
+
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/imagens
+    DESTINATION jogo-da-forca
+)
+
+install(TARGETS jogo-da-forca
+    RUNTIME DESTINATION jogo-da-forca
 )

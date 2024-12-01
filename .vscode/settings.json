@@ -64,6 +64,7 @@
         "thread": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "xmemory": "cpp"
+        "xmemory": "cpp",
+        "qapplication": "cpp"
     }
 }

@@ -14,10 +14,14 @@ using std::array;
 int tentativa = 0;
 void escolherTema(Gui &gui, string &tema, string &palavra);
 
-array<string, 3> temas = {"Fruta", "Esporte", "Pais"};
-array<string, 2>frutas = {"uva", "pera"};
+array<string, 6> temas = {"Fruta", "Esporte", "Pais", "Animal", "Cor", "Heroi"};
+array<string, 9>frutas = {"uva", "pera", "banana", "abacaxi", "kiwi", "morango", "manga", "melancia", "laranja"};
 array<string, 3>esportes = {"futebol", "basquete", "voley"};
-array<string, 3>paises = {"brasil", "mexico", "estados unidos"};
+array<string, 9>paises = {"brasil", "mexico", "estados unidos", "alemanha", "japao", "canada", "china", "italia", "india"};
+array<string, 9>animais = {"urso", "galo", "macaco", "leao", "golfinho", "galinha", "baleia", "peixe", "castor"};
+array<string, 10>cores = {"vermelho", "azul", "ciano", "preto", "verde", "marrom", "cinza", "branco", "rosa", "roxo"};
+array<string, 9>herois = {"batman", "super man", "mulher maravilha", "flash", "homem aranha", "homem de ferro", "aquaman", "arqueiro verde", "lanterna verde"};
+
 string textOculto;
 
 void apertar(char letra, string &palavra, Gui &gui, size_t btnIndex);
@@ -72,7 +76,24 @@ void escolherTema(Gui &gui, string &tema, string &palavra){
         random = rand() % paises.size();
         palavra = paises[random];
     }
+
+    else if(tema == "Animal"){
+        random = rand() % animais.size();
+        palavra = animais[random];
+    }
+
+    else if (tema == "Cor"){
+        random = rand() % cores.size();
+        palavra = cores[random];
+    }
     
+    else if (tema == "Heroi"){
+        random = rand() % herois.size();
+        palavra = herois[random];
+    }
+    
+    
+
     for (char c : palavra){
         if (c != ' ')
         {
@@ -120,12 +141,12 @@ void apertar(char letra, string &palavra, Gui &gui, size_t btnIndex){
     else{
         tentativa++;
         gui.btns[btnIndex]->setStyleSheet("background-color: red; color: white;");
-        string imagem = "../imagens/forca-" + std::to_string(tentativa) + ".png";
+        string imagem = "imagens/forca-" + std::to_string(tentativa) + ".png";
         QPixmap pixmap(QString::fromStdString(imagem));
-        gui.ui.Forca->setPixmap(pixmap);
+        gui.setForcaImagem(pixmap);
         if (tentativa >= 6){
             cout << "game over";
-            gui.gameOver();
+            gui.gameOver(QString::fromStdString(palavra));
         }
     }
 

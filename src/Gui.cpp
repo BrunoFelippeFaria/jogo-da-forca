@@ -16,15 +16,15 @@ Gui::Gui(){
         ui.btnL, ui.btnZ, ui.btnX, ui.btnC, ui.btnV, ui.btnB, ui.btnN, ui.btnM
     };
 
-    QPixmap pixmap("../imagens/forca.png");
+    QPixmap pixmap("imagens/forca.png");
     if (pixmap.isNull())
     {
-        cout << "imagen nao encontrada";
+        cout << "imagem nao encontrada";
     }
 
     ui.Forca->setPixmap(pixmap);
+    setFixedSize(width(),height());
     
-
     show();
 
 
@@ -37,12 +37,17 @@ void Gui::setPalavraText(string text){
     ui.txtLabel->setText(QString::fromStdString(text));
 }
 
-void Gui::gameOver(){
-    QMessageBox::critical(this, "Game over", "você perdeu");
+void Gui::gameOver(QString txt){
+    txt = "você perdeu, a paravra era " + txt;
+    QMessageBox::critical(this, "Game over", txt);
     QApplication::quit();
 }
 
 void Gui::win(){
     QMessageBox::information(this, "Vitoria!", "parabéns, você acertou!");
     QApplication::quit();
+}
+
+void Gui::setForcaImagem(QPixmap pixmap){
+    ui.Forca->setPixmap(pixmap);
 }
