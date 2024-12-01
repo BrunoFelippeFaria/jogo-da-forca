@@ -9,7 +9,7 @@
 
 using std::cout;
 using std::string;
-using std::array;
+using std::vector;
 
 //prototipos de funções
 void escolherTema(Gui &gui, string &tema, string &palavra);
@@ -18,13 +18,14 @@ void apertar(char letra, string &palavra, Gui &gui, size_t btnIndex);
 int tentativa = 0;
 string textOculto;
 //temas e palavras
-array<string, 6> temas = {"Fruta", "Esporte", "Pais", "Animal", "Cor", "Heroi"};
-array<string, 9>frutas = {"uva", "pera", "banana", "abacaxi", "kiwi", "morango", "manga", "melancia", "laranja"};
-array<string, 3>esportes = {"futebol", "basquete", "voley"};
-array<string, 9>paises = {"brasil", "mexico", "estados unidos", "alemanha", "japao", "canada", "china", "italia", "india"};
-array<string, 9>animais = {"urso", "galo", "macaco", "leao", "golfinho", "galinha", "baleia", "peixe", "castor"};
-array<string, 10>cores = {"vermelho", "azul", "ciano", "preto", "verde", "marrom", "cinza", "branco", "rosa", "roxo"};
-array<string, 9>herois = {"batman", "super man", "mulher maravilha", "flash", "homem aranha", "homem de ferro", "aquaman", "arqueiro verde", "lanterna verde"};
+vector<string> temas = {"Fruta", "Esporte", "Pais", "Animal", "Cor", "Heroi"};
+
+vector<string>frutas = {"uva", "pera", "banana", "abacaxi", "kiwi", "morango", "manga", "melancia", "laranja"};
+vector<string>esportes = {"futebol", "basquete", "voley"};
+vector<string>paises = {"brasil", "mexico", "estados unidos", "alemanha", "japao", "canada", "china", "italia", "india"};
+vector<string>animais = {"urso", "galo", "macaco", "leao", "golfinho", "galinha", "baleia", "peixe", "castor"};
+vector<string>cores = {"vermelho", "azul", "ciano", "preto", "verde", "marrom", "cinza", "branco", "rosa", "roxo"};
+vector<string>herois = {"batman", "super man", "mulher maravilha", "flash", "homem aranha", "homem de ferro", "aquaman", "arqueiro verde", "lanterna verde"};
 
 int main(int argc, char *argv[])
 {   
@@ -61,38 +62,20 @@ void escolherTema(Gui &gui, string &tema, string &palavra){
 
     random = rand() % temas.size();
     tema = temas[random];
-
-    if (tema == "Fruta")
-    {
-        random = rand() % frutas.size();
-        palavra = frutas[random];
-    }
-
-    else if (tema == "Esporte"){
-        random = rand() % esportes.size();
-        palavra = esportes[random];
-    }
-
-    else if (tema == "Pais"){
-        random = rand() % paises.size();
-        palavra = paises[random];
-    }
-
-    else if(tema == "Animal"){
-        random = rand() % animais.size();
-        palavra = animais[random];
-    }
-
-    else if (tema == "Cor"){
-        random = rand() % cores.size();
-        palavra = cores[random];
-    }
     
-    else if (tema == "Heroi"){
-        random = rand() % herois.size();
-        palavra = herois[random];
-    }
-    
+    vector<vector<string>> palavrasTemas = {
+        frutas,
+        esportes,
+        paises,
+        animais,
+        cores,
+        herois
+    };
+
+    vector<string> palavras = palavrasTemas[random];
+    random = rand() % palavras.size();
+    palavra = palavras[random];
+
     //esconde a palavra como _
     for (char c : palavra){
         if (c != ' ')
