@@ -17,7 +17,6 @@ class Gui : public QMainWindow{
         vector<QPushButton*> btns;
         void setTemaText(string text);
         void setPalavraText(string text);
-        void apertar(char letra);
         void gameOver(QString txt);
         void win();
         void setForcaImagem(QPixmap pixmap);
