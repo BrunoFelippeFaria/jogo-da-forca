@@ -17,15 +17,6 @@ void apertar(char letra, string &palavra, Gui &gui, size_t btnIndex);
 //variaveis globais
 int tentativa = 0;
 string textOculto;
-//temas e palavras
-vector<string> temas = {"Fruta", "Esporte", "Pais", "Animal", "Cor", "Heroi"};
-
-vector<string>frutas = {"uva", "pera", "banana", "abacaxi", "kiwi", "morango", "manga", "melancia", "laranja"};
-vector<string>esportes = {"futebol", "basquete", "voley"};
-vector<string>paises = {"brasil", "mexico", "estados unidos", "alemanha", "japao", "canada", "china", "italia", "india"};
-vector<string>animais = {"urso", "galo", "macaco", "leao", "golfinho", "galinha", "baleia", "peixe", "castor"};
-vector<string>cores = {"vermelho", "azul", "ciano", "preto", "verde", "marrom", "cinza", "branco", "rosa", "roxo"};
-vector<string>herois = {"batman", "super man", "mulher maravilha", "flash", "homem aranha", "homem de ferro", "aquaman", "arqueiro verde", "lanterna verde"};
 
 int main(int argc, char *argv[])
 {   
@@ -60,9 +51,36 @@ void escolherTema(Gui &gui, string &tema, string &palavra){
     int random;
     srand(time(0));
 
-    random = rand() % temas.size();
-    tema = temas[random];
-    
+    //temas e palavras
+    vector<string> temas = {"Fruta", "Esporte", "Pais", "Animal", "Cor", "Heroi"};
+
+    vector<string>frutas = {
+        "uva", "pera", "banana", "abacaxi", "kiwi", "morango", "manga", "melancia",
+        "laranja"
+    };
+
+    vector<string>esportes = {
+        "futebol", "basquete", "voley"
+    };
+
+    vector<string>paises = {
+        "brasil", "mexico", "estados unidos", "alemanha", "japao", "canada", "china", "italia", "india"
+    };
+
+    vector<string>animais = {
+        "urso", "galo", "macaco", "leao", "golfinho", "galinha", "baleia", "peixe", 
+        "castor"
+    };
+
+    vector<string>cores = {
+        "vermelho", "azul", "ciano", "preto", "verde", "marrom", "cinza", "branco", 
+        "rosa", "roxo"
+    };
+
+    vector<string>herois = {
+        "batman", "super man", "mulher maravilha", "flash", "homem aranha", "homem de ferro", "aquaman", "arqueiro verde", "lanterna verde"
+    };
+
     vector<vector<string>> palavrasTemas = {
         frutas,
         esportes,
@@ -71,6 +89,9 @@ void escolherTema(Gui &gui, string &tema, string &palavra){
         cores,
         herois
     };
+    
+    random = rand() % temas.size();
+    tema = temas[random];
 
     vector<string> palavras = palavrasTemas[random];
     random = rand() % palavras.size();
